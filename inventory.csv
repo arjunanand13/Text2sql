@@ -1,0 +1,9 @@
+item_id,item_name,category,quantity,reorder_level,supplier,supplier_contract,unit_price,total_value
+1001,Laptop,Electronics20,20,10,techmart,info@techmart.com,$800,"$16,000"
+1002, Printer  ,Electronics21,15,10,printco,info@printco.com,$300,"$4,500"
+1003, Smartphone ,Electronics22,30,20,techmart,info@techmart.com,$600,"$18,000"
+1004,Office Chair,Furniture,25,15,furniplus,info@furniplus.com,$100,"$2,500"
+1005,Printer Ink,Office,50,30,officesup, info@officesup.com,$50,"$2,500 "
+1006,Stapler,Office,40,20,officesup, info@officesup.com,$10,$400
+1007,Notebook,Office,100,50,stationco,info@stationco.com,$5,$500
+1008,Desk Lamp,Furniture,20,10,furniplus, info@furniplus.com,$30,$600

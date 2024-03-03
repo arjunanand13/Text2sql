@@ -21,19 +21,16 @@ This project focuses on converting natural language text to SQL queries using st
 
 However, while SQLCoder2 model can be quantized to 4-bit, 8-bit and 16 bit only 4-bit and 8-bit quantization operations are currently supported.
 
-### Druid Integration
+### SQLITE Integration
 
-We have integrated the Apache Druid API into our system. Apache Druid is a real-time analytics database designed for fast slice-and-dice analytics ("OLAP" queries) on large data sets. Most often, Druid powers use cases where real-time ingestion, fast query performance, and high uptime are important.
-
-Using the [Apache Druid](https://druid.apache.org/) API, we were able to generate CSV insert statements for efficient data ingestion. To start Druid on localhost, we used Apache Druid version 28.0.0.
+We seamlessly integrate SQLite 3, a lightweight relational database, offering efficient data storage and retrieval. Leveraging its simplicity and reliability, we ensure robust database operations for our system
 
 ### Databases and Tables
 
 1. **Database 1**
    - Tables:
-     - order.csv
-     - orderdetails.csv
-
+     - inventory
+     
 2. **Database 2**
    - Tables:
      - actions
@@ -50,26 +47,10 @@ Using the [Apache Druid](https://druid.apache.org/) API, we were able to generat
      - media_type
      - users
     
-### Inference notebooks
-
-inference.ipynb: This notebook demonstrates the inference process for Database 1.
-inference_set1_codellama.ipynb: This notebook specifically focuses on the inference process using the CodeLlama model for Database 1.
-inference_set2_codellama.ipynb: This notebook demonstrates inference process on  CodeLlama model for Database 2.
-inference_set1_sqlcoder.ipynb: This notebook specifically focuses on the inference process using the SqlCoder2 model for Database 1.
-inference_set2_sqlcoder.ipynb: This notebook demonstrates inference process on  SqlCoder2 model for Database 2.
-
-### Analysis
-
--The inference was conducted on a server equipped with a NVIDIA GeForce RTX 3090 (Genesis) GPU.
--The analysis is drew on the provided Excel sheet, and it includes the inference results for three databases: Database 1 (overall inference) ,Database 2 (Set 1 inference) and Databse 3 (Set 2 Inference) using the specified models.
--Sheet 3 has configurations of both models as well as comparitive results of Database 1.
--Trained Model Predictions has results conferred from standalone queries and database
-
-
 
 ### Acknowledgements
 
-druid: (https://druid.apache.org/docs/latest/design/)
+sqlite: ([https://druid.apache.org/docs/latest/design/](https://www.sqlite.org/docs.html))
 
 hugginface: (https://huggingface.co/docs/transformers/index)
 

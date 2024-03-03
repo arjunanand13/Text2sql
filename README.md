@@ -1,23 +1,14 @@
-# Project Name - Text to SQL
+NSQL - Text2SQL (Excel to SQLite Converter and SQL Query Executor)
 
 ## Overview
-
-This project focuses on converting natural language text to SQL queries using state-of-the-art models. We have implemented two primary models, namely CodeLlama and SQLCoder, to perform this task.
+This Project facilitates the conversion of Excel files to SQLite databases and provides functionality to execute SQL queries on the generated database. Additionally, it includes converting natural language text to SQL queries using state-of-the-art models. We have implemented two primary models, namely CodeLlama and SQLCoder, to perform this task.
 
 ## File Structure
 excel_db.py: Python script for converting Excel data to a database.
 inventory.xlsx: Sample Excel file containing inventory data (input file).
 inventory.db: SQLite database file created by the script (output file).
+nsql.py:This Python script generates SQL queries based on user prompts and executes them on a SQLite database. It utilizes a pre-trained language model to convert natural language instructions into SQL queries.
 
-## Usage
-Input Data: Prepare your data in an Excel file named inventory.xlsx (or any other desired name).
-
-Run the Script: Execute the Python script excel_db.py. The script will read the Excel file, convert it to CSV format, and create an SQLite database file (inventory.db) with corresponding tables.
-
-```
-python excel_db.py
-```
-Check Database: After execution, you will find the generated SQLite database file (inventory.db) containing the converted data.
 
 ### Models
 
@@ -62,8 +53,48 @@ We seamlessly integrate SQLite 3, a lightweight relational database, offering ef
      - media_type
      - users
     
+## Usage
+Environment Setup
+Create Virtual Environment: Set up a virtual environment using Python's built-in venv module.
+```
+python -m venv myenv
+```
+Activate Virtual Environment: Activate the virtual environment to isolate dependencies.
 
-### Acknowledgements
+On Windows:
+```
+myenv\Scripts\activate
+```
+On macOS and Linux:
+```
+source myenv/bin/activate
+```
+Install Required Packages: Install the necessary packages using pip.
+```
+pip install -r requirements.txt
+```
+### Input Data
+Prepare your data in an Excel file named inventory.xlsx (or any other desired name).
+### Run the Script
+Execute the Python script excel_db.py. The script will read the Excel file, convert it to CSV format, and create an SQLite database file (inventory.db) with corresponding tables.
+```
+python excel_db.py
+```
+Check Database
+After execution, you will find the generated SQLite database file (inventory.db) containing the converted data.
+Execute SQL Queries
+To execute SQL queries on the generated database, run the script nsql.py.
+```
+python nsql.py
+```
+Follow the prompts to input your SQL query and interact with the database.
+
+Note
+1) Ensure that the required Excel file (inventory.xlsx) is present in the directory before running the script. Additionally, review the generated SQLite database (inventory.db) to verify the converted data.
+2) Here we have used SQLCODER2 4-bit quantized version , which occupies GPU RAM of around 9GB . Consider other models and quantizations as per your GPU storage .
+3) We have considered one table in one sheet for faster inference , for multiple tables add details in further sheets of excel.
+
+## Acknowledgements
 
 sqlite: ([https://druid.apache.org/docs/latest/design/](https://www.sqlite.org/docs.html))
 

@@ -4,6 +4,21 @@
 
 This project focuses on converting natural language text to SQL queries using state-of-the-art models. We have implemented two primary models, namely CodeLlama and SQLCoder, to perform this task.
 
+## File Structure
+excel_db.py: Python script for converting Excel data to a database.
+inventory.xlsx: Sample Excel file containing inventory data (input file).
+inventory.db: SQLite database file created by the script (output file).
+
+## Usage
+Input Data: Prepare your data in an Excel file named inventory.xlsx (or any other desired name).
+
+Run the Script: Execute the Python script excel_db.py. The script will read the Excel file, convert it to CSV format, and create an SQLite database file (inventory.db) with corresponding tables.
+
+```
+python excel_db.py
+```
+Check Database: After execution, you will find the generated SQLite database file (inventory.db) containing the converted data.
+
 ### Models
 
 1. **CodeLlama**

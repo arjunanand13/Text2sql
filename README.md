@@ -1,4 +1,4 @@
-NSQL - Text2SQL (Excel to SQLite Converter and SQL Query Executor)
+# NSQL - Text2SQL (Excel to SQLite Converter and SQL Query Executor)
 
 ## Overview
 This Project facilitates the conversion of Excel files to SQLite databases and provides functionality to execute SQL queries on the generated database. Additionally, it includes converting natural language text to SQL queries using state-of-the-art models. We have implemented two primary models, namely CodeLlama and SQLCoder, to perform this task.
